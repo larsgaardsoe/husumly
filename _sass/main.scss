@@ -1,0 +1,197 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+$parallax-window-height: 20em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
+}
+
+.parallax-background {
+  background: url("../images/map.png") repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
+
+// Based on http://codepen.io/skeurentjes/
+
+
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cookie);
+
+.quiet {
+  color: $medium-gray;
+}
+
+h1 {
+  font-family: 'Cookie', cursive;
+  font-size: 8em;
+  line-height: 1em;
+  margin: 0;
+  text-align: center;
+  .quiet {
+    font-size: 30%;
+  }
+}
+
+body {
+  font-family: 'Bitter', serif;
+}
+
+h2 {
+  font-family: 'Cookie', cursive;
+  font-size: 4em;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  @include clearfix;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navigation {
+  margin: 0 0 2rem 0;
+  @include clearfix;
+  ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+
+  }
+  li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  a {
+    color: inherit;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    &:hover {
+      border-bottom: 1px solid red;
+    }
+  }
+}
+
+header, section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: none;
+  background: #fff;
+  display: block;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 80%;
+  color: $medium-gray;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+#om {
+  background: #EDE5DF;
+}
+
+.vertical-centered {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  .wrapper-centered {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+#billeder {
+  padding: 4rem 0;
+  @include transition(all 1.0s ease-in-out);
+  .flere-billeder {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+  }
+  img {
+    display: block;
+    float: left;
+    border-radius: 50%;
+    margin-right: 2rem;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.bg-arbejdsdag {
+  background-image: url('../images/bg-arbejdsdag.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-facade {
+  background-image: url('../images/bg-facade.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-workshop {
+  background-image: url('../images/bg-workshop.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+#dokumenter {
+  background: #EBE3C6;
+  padding: 4rem 0;
+}
+
+#kontakt {
+  background: #D2D8A3;
+  padding: 4rem 0;
+}
+
+.col-container {
+  @include outer-container;
+}
+
+.col-5050 {
+  @include span-columns(6);
+}
